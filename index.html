@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        
+        <div class="password-display">
+            <input type="text" id="password" readonly placeholder="Your password will appear here">
+            <button id="copy-btn">Copy</button>
+        </div>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="length">Password Length: <span id="length-value" class="length-display">12</span></label>
+                <input type="range" id="length" min="4" max="32" value="12">
+            </div>
+            
+            <div class="control-group">
+                <label>Include:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="uppercase" checked>
+                        <label for="uppercase">Uppercase (A-Z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="lowercase" checked>
+                        <label for="lowercase">Lowercase (a-z)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="numbers" checked>
+                        <label for="numbers">Numbers (0-9)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="symbols" checked>
+                        <label for="symbols">Symbols (!@#$%)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <div class="strength-meter">
+                    <div class="strength-bar" id="strength-bar"></div>
+                </div>
+                <div class="strength-label" id="strength-label">Strength: Medium</div>
+            </div>
+        </div>
+        
+        <button id="generate-btn">Generate Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
